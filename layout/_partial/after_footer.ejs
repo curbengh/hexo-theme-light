@@ -17,9 +17,9 @@ var disqus_shortname = '<%= config.disqus_shortname %>';
 <% } %>
 
 <% if (theme.fancybox){ %>
-<link rel="stylesheet" href="<%- config.root %>fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="<%- config.root %>fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
+<%- js('fancybox/jquery.fancybox.min.js') %>
+<%- css('fancybox/jquery.fancybox.min.css') %>
+<script>
 (function($){
   $('.fancybox').fancybox();
 })(jQuery);
